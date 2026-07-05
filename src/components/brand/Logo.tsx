@@ -21,18 +21,23 @@ export function Logo({ variant = "dark", className }: LogoProps) {
           variant === "light" ? "bg-gold/30" : "bg-gold/25",
         )}
       />
-      <img
-        src={logo}
-        alt="YAM Management Services"
-        width={64}
-        height={60}
+      <span
         className={cn(
-          "w-auto transition-transform duration-500 ease-out will-change-transform group-hover:-translate-y-0.5 group-hover:transform-[rotateY(8deg)_scale(1.08)]",
-          variant === "light"
-            ? "h-16 drop-shadow-[0_2px_6px_rgba(0,0,0,0.8)]"
-            : "h-14 drop-shadow-[0_6px_16px_rgba(0,0,0,0.18)]",
+          "flex items-center rounded-2xl transition-transform duration-500 ease-out will-change-transform group-hover:-translate-y-0.5 group-hover:transform-[rotateY(8deg)_scale(1.08)]",
+          variant === "light" && "bg-linear-to-br from-white to-white/80 p-2 shadow-soft",
         )}
-      />
+      >
+        <img
+          src={logo}
+          alt="YAM Management Services"
+          width={64}
+          height={60}
+          className={cn(
+            "w-auto",
+            variant === "light" ? "h-12" : "h-14 drop-shadow-[0_6px_16px_rgba(0,0,0,0.18)]",
+          )}
+        />
+      </span>
     </Link>
   );
 }
