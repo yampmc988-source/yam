@@ -164,11 +164,11 @@ export function Footer() {
               </h4>
               <address className="mt-4 space-y-3 text-sm not-italic tracking-wide text-white/75">
                 <a
-                  href="mailto:hello@yamservices.ae"
+                  href="mailto:info@yampmc.com"
                   className="group flex w-fit items-center gap-2.5 rounded-sm transition-colors hover:text-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold/60 focus-visible:ring-offset-2 focus-visible:ring-offset-navy-deep"
                 >
                   <Mail className="size-3.5 text-gold/70 transition-colors group-hover:text-gold" aria-hidden="true" />
-                  hello@yamservices.ae
+                  info@yampmc.com
                 </a>
                 <a
                   href="tel:+97140000000"

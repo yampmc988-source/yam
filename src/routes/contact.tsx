@@ -56,8 +56,8 @@ const details = [
   {
     icon: Mail,
     label: "Email",
-    value: "hello@yamservices.ae",
-    href: "mailto:hello@yamservices.ae",
+    value: "info@yampmc.com",
+    href: "mailto:info@yampmc.com",
     copyable: true,
   },
   {
