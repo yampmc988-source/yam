@@ -1,9 +1,9 @@
 import { Link } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { ServiceCard } from "@/components/sections/ServiceCard";
 import { StaggerGroup, StaggerItem } from "@/components/ui/reveal";
-import { TiltCard } from "@/components/ui/tilt-card";
 import { services } from "@/lib/site-data";
 
 export function HomeServices() {
@@ -31,28 +31,16 @@ export function HomeServices() {
               <ServiceCard service={service} />
             </StaggerItem>
           ))}
-          <StaggerItem>
-            <TiltCard max={6} scale={1.015} className="h-full rounded-xl">
-              <Link
-                to="/services"
-                className="group relative flex h-full min-h-[280px] flex-col justify-between overflow-hidden rounded-xl bg-gradient-navy p-8 shadow-soft transition-shadow duration-500 hover:shadow-elevated"
-              >
-                <div className="pointer-events-none absolute -right-10 -top-10 size-40 animate-float-slow rounded-full bg-gold/10 blur-3xl" />
-                <div className="pointer-events-none absolute -bottom-14 -left-10 size-32 animate-float-med rounded-full bg-soft-blue/10 blur-3xl" />
-                <span className="relative text-xs font-semibold uppercase tracking-[0.18em] text-gold-light">Every discipline</span>
-                <div className="relative">
-                  <h3 className="text-2xl font-bold leading-tight text-white">
-                    One partner across the full project lifecycle
-                  </h3>
-                  <span className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-gold">
-                    Explore all services
-                    <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" />
-                  </span>
-                </div>
-              </Link>
-            </TiltCard>
-          </StaggerItem>
         </StaggerGroup>
+
+        <div className="mt-12 flex justify-center md:hidden">
+          <Button variant="navy" size="lg" asChild>
+            <Link to="/services">
+              Explore all services
+              <ArrowRight className="size-4" />
+            </Link>
+          </Button>
+        </div>
       </div>
     </section>
   );
