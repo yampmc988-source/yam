@@ -105,7 +105,7 @@ function FaqsPage() {
         breadcrumb={[{ label: "Home", to: "/" }, { label: "FAQs" }]}
       />
 
-      <section className="container-lux py-24">
+      <section className="container-lux overflow-x-clip py-24">
         <div className="mx-auto max-w-3xl">
           {/* Search */}
           <Reveal>

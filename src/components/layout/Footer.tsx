@@ -1,4 +1,3 @@
-import { useState, type FormEvent } from "react";
 import { Link } from "@tanstack/react-router";
 import { motion, useReducedMotion } from "framer-motion";
 import {
@@ -12,14 +11,10 @@ import {
   Mail,
   Phone,
   MapPin,
-  Check,
   ShieldCheck,
-  Award,
-  Building2,
-  TrendingUp,
 } from "lucide-react";
 import { Logo } from "@/components/brand/Logo";
-import { services } from "@/lib/site-data";
+import { services, industries } from "@/lib/site-data";
 
 export function Footer() {
   const shouldReduceMotion = useReducedMotion();
@@ -68,30 +63,8 @@ export function Footer() {
       />
 
       {/* CTA */}
-      <div className="container-lux relative border-b border-white/10 pt-20 pb-16 sm:pt-24 sm:pb-20">
+      <div className="container-lux relative border-b border-white/10 py-16 sm:py-20">
         <CtaBand fadeUp={fadeUp} tilt={tilt} />
-      </div>
-
-      {/* Credentials strip */}
-      <div className="relative border-b border-white/10">
-        <div className="container-lux relative py-6">
-          <ul className="flex flex-wrap items-center justify-between gap-x-10 gap-y-4">
-            {[
-              { Icon: ShieldCheck, label: "ISO 9001:2015 certified" },
-              { Icon: Award, label: "PMP certified consultants" },
-              { Icon: Building2, label: "RERA registered advisor" },
-              { Icon: TrendingUp, label: "150+ projects delivered" },
-            ].map(({ Icon, label }) => (
-              <li
-                key={label}
-                className="group flex items-center gap-2.5 text-xs font-medium uppercase tracking-[0.14em] text-white/50 transition-colors duration-300 hover:text-white/80"
-              >
-                <Icon className="size-4 text-gold/70 transition-transform duration-300 group-hover:scale-110 group-hover:text-gold" aria-hidden="true" />
-                {label}
-              </li>
-            ))}
-          </ul>
-        </div>
       </div>
 
       <div className="relative border-b border-white/10">
@@ -108,26 +81,6 @@ export function Footer() {
                 organisations across the UAE to deliver complex projects with
                 precision, confidence and enduring quality.
               </p>
-              <address className="mt-8 space-y-3 text-sm not-italic tracking-wide text-white/75">
-                <a
-                  href="mailto:hello@yamservices.ae"
-                  className="group flex w-fit items-center gap-2.5 rounded-sm transition-colors hover:text-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold/60 focus-visible:ring-offset-2 focus-visible:ring-offset-navy-deep"
-                >
-                  <Mail className="size-3.5 text-gold/70 transition-colors group-hover:text-gold" aria-hidden="true" />
-                  hello@yamservices.ae
-                </a>
-                <a
-                  href="tel:+97140000000"
-                  className="group flex w-fit items-center gap-2.5 rounded-sm transition-colors hover:text-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold/60 focus-visible:ring-offset-2 focus-visible:ring-offset-navy-deep"
-                >
-                  <Phone className="size-3.5 text-gold/70 transition-colors group-hover:text-gold" aria-hidden="true" />
-                  +971 4 000 0000
-                </a>
-                <span className="flex items-center gap-2.5">
-                  <MapPin className="size-3.5 text-gold/70" aria-hidden="true" />
-                  Business Bay, Dubai, UAE
-                </span>
-              </address>
               <div className="mt-9 flex gap-3.5">
                 {[
                   { Icon: Linkedin, label: "LinkedIn", href: "#" },
@@ -140,30 +93,27 @@ export function Footer() {
                   </a>
                 ))}
               </div>
-            </motion.div>
 
-            <motion.div
-              {...fadeUp}
-              transition={{ duration: 0.6, delay: shouldReduceMotion ? 0 : 0.08, ease: [0.16, 1, 0.3, 1] }}
-              className="lg:col-span-2"
-            >
-              <FooterCol title="Company">
-                <FooterLink to="/">Home</FooterLink>
-                <FooterLink to="/about">About</FooterLink>
-                <FooterLink to="/industries">Industries</FooterLink>
-                <FooterLink to="/faqs">FAQs</FooterLink>
-                <FooterLink to="/contact">Contact</FooterLink>
-              </FooterCol>
+              <div className="mt-8 rounded-2xl border border-gold/25 bg-gold/[0.04] px-5 py-4">
+                <div className="flex items-center gap-2 text-[0.65rem] font-semibold uppercase tracking-[0.16em] text-gold/80">
+                  <ShieldCheck className="size-4" aria-hidden="true" />
+                  Certified &amp; compliant
+                </div>
+                <p className="mt-2 font-display text-lg font-semibold text-white">ISO 9001:2015</p>
+                <p className="mt-0.5 text-xs text-white/50">
+                  PMP certified · RERA registered · 250+ projects delivered
+                </p>
+              </div>
             </motion.div>
 
             <motion.nav
               {...fadeUp}
-              transition={{ duration: 0.6, delay: shouldReduceMotion ? 0 : 0.16, ease: [0.16, 1, 0.3, 1] }}
+              transition={{ duration: 0.6, delay: shouldReduceMotion ? 0 : 0.08, ease: [0.16, 1, 0.3, 1] }}
               aria-label="Services"
               className="lg:col-span-3"
             >
               <FooterCol title="Services">
-                {services.slice(0, 5).map((s) => (
+                {services.slice(0, 6).map((s) => (
                   <li key={s.slug}>
                     <Link
                       to="/services/$slug"
@@ -182,27 +132,76 @@ export function Footer() {
               </FooterCol>
             </motion.nav>
 
+            <motion.nav
+              {...fadeUp}
+              transition={{ duration: 0.6, delay: shouldReduceMotion ? 0 : 0.16, ease: [0.16, 1, 0.3, 1] }}
+              aria-label="Industries"
+              className="lg:col-span-2"
+            >
+              <h4 className="font-display text-sm font-semibold uppercase tracking-[0.18em] text-gold">Industries</h4>
+              <ul className="mt-4 space-y-3 text-sm">
+                {industries.map((ind) => (
+                  <li key={ind.slug}>
+                    <a
+                      href={`/industries#${ind.slug}`}
+                      className="group -ml-2 inline-flex items-center gap-2 rounded-full py-1 pl-2 pr-2.5 text-white/65 transition-all duration-300 hover:translate-x-0.5 hover:bg-white/[0.06] hover:pr-3 hover:text-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold/60"
+                    >
+                      <span className="h-px w-2.5 shrink-0 bg-gold/40 transition-all duration-300 group-hover:w-4 group-hover:bg-gold" aria-hidden="true" />
+                      <span>{ind.name}</span>
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </motion.nav>
+
             <motion.div
               {...fadeUp}
               transition={{ duration: 0.6, delay: shouldReduceMotion ? 0 : 0.24, ease: [0.16, 1, 0.3, 1] }}
               className="lg:col-span-3 lg:border-l lg:border-white/10 lg:pl-10"
             >
               <h4 className="font-display text-xs font-semibold uppercase tracking-[0.22em] text-gold">
-                Newsletter
+                Contact
               </h4>
-              <p className="mt-4 text-sm leading-relaxed text-white/60">
-                Insight on project delivery, straight to your inbox. No noise
-                only substance.
-              </p>
-              <NewsletterCard tilt={tilt} />
+              <address className="mt-4 space-y-3 text-sm not-italic tracking-wide text-white/75">
+                <a
+                  href="mailto:hello@yamservices.ae"
+                  className="group flex w-fit items-center gap-2.5 rounded-sm transition-colors hover:text-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold/60 focus-visible:ring-offset-2 focus-visible:ring-offset-navy-deep"
+                >
+                  <Mail className="size-3.5 text-gold/70 transition-colors group-hover:text-gold" aria-hidden="true" />
+                  hello@yamservices.ae
+                </a>
+                <a
+                  href="tel:+97140000000"
+                  className="group flex w-fit items-center gap-2.5 rounded-sm transition-colors hover:text-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold/60 focus-visible:ring-offset-2 focus-visible:ring-offset-navy-deep"
+                >
+                  <Phone className="size-3.5 text-gold/70 transition-colors group-hover:text-gold" aria-hidden="true" />
+                  +971 4 000 0000
+                </a>
+                <span className="flex items-start gap-2.5">
+                  <MapPin className="mt-0.5 size-3.5 shrink-0 text-gold/70" aria-hidden="true" />
+                  Business Bay, Dubai, UAE
+                </span>
+              </address>
+
+              <h4 className="mt-9 font-display text-xs font-semibold uppercase tracking-[0.22em] text-gold">
+                Company
+              </h4>
+              <ul className="mt-4 space-y-3 text-sm">
+                <FooterLink to="/">Home</FooterLink>
+                <FooterLink to="/about">About</FooterLink>
+                <FooterLink to="/industries">Industries</FooterLink>
+                <FooterLink to="/faqs">FAQs</FooterLink>
+                <FooterLink to="/contact">Contact</FooterLink>
+              </ul>
             </motion.div>
           </div>
         </div>
       </div>
 
       <div className="container-lux relative">
-        <div className="flex flex-col items-center justify-between gap-6 py-8 text-xs tracking-wide text-white/50 md:flex-row">
-          <p>YAM Management Services. All rights reserved.</p>
+        <div className="flex flex-col items-center justify-between gap-4 py-8 text-xs tracking-wide text-white/50 md:flex-row">
+          <p>© {new Date().getFullYear()} YAM Management Services. All rights reserved.</p>
+          <p className="text-white/40">Dubai, UAE · Premium Project Management Consultancy</p>
           <div className="flex items-center gap-8">
             <Link
               to="/"
@@ -238,59 +237,33 @@ function CtaBand({
   };
   tilt: boolean;
 }) {
-  const stats = [
-    { value: "150+", label: "Projects delivered" },
-    { value: "12", label: "Years in the UAE market" },
-    { value: "AED 2.4B+", label: "Portfolio value managed" },
-  ];
-
   return (
     <motion.div
       {...fadeUp}
       transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-      className="grid gap-12 lg:grid-cols-12 lg:items-end lg:gap-x-10"
+      className="flex flex-col items-start justify-between gap-10 lg:flex-row lg:items-center lg:gap-16"
     >
-      <div className="lg:col-span-8">
+      <div>
         <span className="mb-4 flex items-center gap-3 font-display text-xs font-semibold uppercase tracking-[0.28em] text-gold">
           <span className="h-px w-8 bg-gold/60" aria-hidden="true" />
-          Work with us
+          Scale with YAM
         </span>
         <h3 className="font-display max-w-2xl text-3xl font-semibold leading-[1.15] tracking-tight text-white sm:text-4xl lg:text-5xl">
-          Bring precision and accountability to your next project.
+          Ready to bring precision to your{" "}
+          <span className="text-gold">next project?</span>
         </h3>
-        <p className="mt-5 max-w-md text-[0.95rem] leading-relaxed text-white/60">
-          From feasibility to handover, our consultants keep your programme
-          on schedule, on budget, and answerable at every milestone.
-        </p>
-
-        <div className="mt-8 flex flex-wrap items-center gap-6">
-          <Link to="/contact" className="rounded-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold/60 focus-visible:ring-offset-2 focus-visible:ring-offset-navy-deep">
-            <RaisedButton tilt={tilt} />
-          </Link>
-          <a
-            href="tel:+97140000000"
-            className="group inline-flex items-center gap-2.5 rounded-sm text-sm font-medium text-white/75 transition-colors hover:text-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold/60"
-          >
-            <SocialOrb Icon={Phone} tilt={tilt} />
-            +971 4 000 0000
-          </a>
-        </div>
       </div>
 
-      <div className="lg:col-span-4 lg:border-l lg:border-white/10 lg:pl-10">
-        <dl className="grid grid-cols-3 gap-6 sm:grid-cols-1 sm:gap-5">
-          {stats.map(({ value, label }) => (
-            <div key={label} className="border-t border-white/10 pt-4 first:border-t-0 first:pt-0 sm:border-t sm:pt-4">
-              <dt className="sr-only">{label}</dt>
-              <dd className="font-display text-2xl font-semibold tracking-tight text-gold sm:text-3xl">
-                {value}
-              </dd>
-              <dd className="mt-1 text-xs uppercase tracking-[0.1em] text-white/50">
-                {label}
-              </dd>
-            </div>
-          ))}
-        </dl>
+      <div className="flex shrink-0 flex-wrap items-center gap-4">
+        <Link to="/contact" className="rounded-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold/60 focus-visible:ring-offset-2 focus-visible:ring-offset-navy-deep">
+          <RaisedButton tilt={tilt} />
+        </Link>
+        <Link
+          to="/services"
+          className="rounded-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold/60 focus-visible:ring-offset-2 focus-visible:ring-offset-navy-deep"
+        >
+          <OutlineButton tilt={tilt} />
+        </Link>
       </div>
     </motion.div>
   );
@@ -305,8 +278,23 @@ function RaisedButton({ tilt }: { tilt: boolean }) {
       style={{ transformPerspective: 600 }}
       className="group inline-flex shrink-0 items-center gap-3 rounded-full bg-gradient-to-b from-[#f0d5a3] to-gold px-7 py-3.5 text-sm font-semibold uppercase tracking-[0.08em] text-navy-deep shadow-[0_1px_0_rgba(255,255,255,0.5)_inset,0_10px_22px_-6px_rgba(0,0,0,0.5)] transition-shadow duration-200 hover:shadow-[0_1px_0_rgba(255,255,255,0.5)_inset,0_18px_30px_-8px_rgba(0,0,0,0.55)]"
     >
-      Start a conversation
+      Get in touch
       <ArrowRight className="size-4 transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true" />
+    </motion.span>
+  );
+}
+
+function OutlineButton({ tilt }: { tilt: boolean }) {
+  return (
+    <motion.span
+      whileHover={tilt ? { rotateX: -8, rotateY: 8, y: -2 } : { y: -2 }}
+      whileTap={{ rotateX: 0, rotateY: 0, y: 0, scale: 0.98 }}
+      transition={{ type: "spring", stiffness: 300, damping: 20 }}
+      style={{ transformPerspective: 600 }}
+      className="group inline-flex shrink-0 items-center gap-3 rounded-full border border-white/20 bg-white/3 px-7 py-3.5 text-sm font-semibold uppercase tracking-[0.08em] text-white transition-colors duration-200 hover:border-gold/60 hover:text-gold"
+    >
+      Our services
+      <ArrowUpRight className="size-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" aria-hidden="true" />
     </motion.span>
   );
 }
@@ -327,68 +315,6 @@ function SocialOrb({
     >
       <Icon className="size-4" aria-hidden="true" />
     </motion.span>
-  );
-}
-
-function NewsletterCard({ tilt }: { tilt: boolean }) {
-  const [email, setEmail] = useState("");
-  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
-
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    if (!email.trim()) return;
-    setStatus("loading");
-    window.setTimeout(() => {
-      setStatus("success");
-      setEmail("");
-    }, 600);
-  };
-
-  if (status === "success") {
-    return (
-      <div
-        role="status"
-        className="mt-6 flex items-center gap-2.5 border-b border-gold/30 pb-3 text-sm text-gold"
-      >
-        <Check className="size-4 shrink-0" aria-hidden="true" />
-        Subscribed. Watch your inbox.
-      </div>
-    );
-  }
-
-  return (
-    <>
-      <form
-        className="mt-6 flex items-center gap-3 border-b border-white/15 pb-3 transition-colors focus-within:border-gold/60"
-        onSubmit={handleSubmit}
-        noValidate
-      >
-        <label htmlFor="footer-newsletter-email" className="sr-only">
-          Email address
-        </label>
-        <input
-          id="footer-newsletter-email"
-          type="email"
-          required
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          placeholder="Your email address"
-          autoComplete="email"
-          className="w-full min-w-0 bg-transparent text-sm text-white placeholder:text-white/40 focus:outline-none"
-        />
-        <motion.button
-          type="submit"
-          disabled={status === "loading"}
-          whileHover={tilt && status !== "loading" ? { rotateX: -10, y: -1 } : undefined}
-          style={{ transformPerspective: 300 }}
-          className="flex shrink-0 items-center gap-1.5 text-xs font-semibold uppercase tracking-[0.1em] text-gold transition-colors hover:text-white disabled:cursor-not-allowed disabled:opacity-60 focus-visible:outline-none"
-        >
-          {status === "loading" ? "Sending" : "Send"}
-          {status !== "loading" && <ArrowRight className="size-3.5" aria-hidden="true" />}
-        </motion.button>
-      </form>
-      <p className="mt-3 text-xs text-white/45">By subscribing you agree to our Privacy Policy.</p>
-    </>
   );
 }
 

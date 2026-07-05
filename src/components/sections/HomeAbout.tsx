@@ -16,7 +16,7 @@ const points = [
 
 export function HomeAbout() {
   return (
-    <section className="container-lux py-24">
+    <section className="container-lux overflow-x-clip py-24">
       <div className="grid items-center gap-14 lg:grid-cols-2">
         <Reveal className="relative order-2 lg:order-1 perspective-midrange">
           <TiltCard max={6} scale={1.01} className="rounded-3xl shadow-elevated">

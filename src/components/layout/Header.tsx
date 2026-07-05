@@ -216,7 +216,7 @@ export function Header() {
             transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
             className="overflow-hidden border-t border-border bg-background lg:hidden"
           >
-            <nav className="container-lux flex flex-col gap-1 py-5">
+            <nav className="container-lux flex flex-col gap-2 py-6">
               {nav.map((item, i) => (
                 <motion.div
                   key={item.label}
@@ -226,26 +226,26 @@ export function Header() {
                 >
                   <Link
                     to={item.to}
-                    className="rounded-lg px-3 py-3 text-base font-medium text-foreground hover:bg-secondary"
+                    className="block rounded-lg px-3 py-3.5 text-base font-medium text-foreground hover:bg-secondary"
                   >
                     {item.label}
                   </Link>
                 </motion.div>
               ))}
-              <div className="mt-2 grid grid-cols-2 gap-2 border-t border-border pt-4">
+              <div className="mt-3 grid grid-cols-2 gap-3 border-t border-border pt-5">
                 {navServices.map((s) => (
                   <Link
                     key={s.slug}
                     to="/services/$slug"
                     params={{ slug: s.slug }}
-                    className="flex items-center gap-2 rounded-lg bg-secondary px-3 py-2.5 text-xs font-medium text-foreground"
+                    className="flex items-start gap-2.5 rounded-lg bg-secondary px-3.5 py-3 text-sm font-medium leading-snug text-foreground"
                   >
-                    <s.icon className="size-4 text-gold-deep" />
+                    <s.icon className="mt-0.5 size-4 shrink-0 text-gold-deep" />
                     {s.title}
                   </Link>
                 ))}
               </div>
-              <Button asChild variant="gold" size="lg" className="mt-4">
+              <Button asChild variant="gold" size="lg" className="mt-5">
                 <Link to="/contact">Get Consultation</Link>
               </Button>
             </nav>
