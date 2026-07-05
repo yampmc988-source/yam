@@ -179,7 +179,7 @@ export function Footer() {
                 </a>
                 <span className="flex items-start gap-2.5">
                   <MapPin className="mt-0.5 size-3.5 shrink-0 text-gold/70" aria-hidden="true" />
-                  Business Bay, Dubai, UAE
+                  Office 01, Fairlink Bldg., Behind Jetour Showroom, Al Khubaisi, Dubai, UAE
                 </span>
               </address>
 

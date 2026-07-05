@@ -49,8 +49,8 @@ const details = [
   {
     icon: MapPin,
     label: "Office",
-    value: "Business Bay, Dubai, United Arab Emirates",
-    href: "https://www.google.com/maps?q=Business+Bay+Dubai",
+    value: "Office 01, Fairlink Bldg., Behind Jetour Showroom, Al Khubaisi, Dubai, UAE",
+    href: "https://www.google.com/maps?q=Fairlink+Building+Al+Khubaisi+Dubai",
     copyable: false,
   },
   {
@@ -377,7 +377,7 @@ function ContactPage() {
           <Reveal className="relative overflow-hidden rounded-3xl border border-border shadow-soft">
             <iframe
               title="YAM Management Services office location in Dubai"
-              src="https://www.google.com/maps?q=Business+Bay+Dubai&output=embed"
+              src="https://www.google.com/maps?q=Fairlink+Building+Al+Khubaisi+Dubai&output=embed"
               className="h-[420px] w-full grayscale-[15%]"
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
@@ -388,11 +388,11 @@ function ContactPage() {
                 <MapPin className="size-5" />
               </span>
               <div className="min-w-0">
-                <p className="text-sm font-semibold text-navy">Business Bay, Dubai</p>
+                <p className="text-sm font-semibold text-navy">Fairlink Bldg., Al Khubaisi, Dubai</p>
                 <p className="text-xs text-muted-foreground">United Arab Emirates</p>
               </div>
               <a
-                href="https://www.google.com/maps?q=Business+Bay+Dubai"
+                href="https://www.google.com/maps?q=Fairlink+Building+Al+Khubaisi+Dubai"
                 target="_blank"
                 rel="noreferrer"
                 className="ml-auto flex shrink-0 items-center gap-1.5 rounded-lg bg-navy px-3 py-2 text-xs font-semibold text-gold transition-colors hover:bg-navy-deep"
