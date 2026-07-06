@@ -100,7 +100,7 @@ export function Header() {
                       exit={{ opacity: 0, y: 8, rotateX: -6 }}
                       transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
                       style={{ transformPerspective: 1000, transformOrigin: "top center" }}
-                      className="absolute left-1/2 top-full w-[46rem] -translate-x-1/2 pt-4"
+                      className="absolute left-1/2 top-full w-[46rem] max-w-[calc(100vw-3rem)] -translate-x-1/2 pt-4"
                     >
                       <div className="overflow-hidden rounded-2xl border border-border bg-card/95 p-3 shadow-elevated backdrop-blur-xl">
                         <div className="grid grid-cols-2 gap-1">
