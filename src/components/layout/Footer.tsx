@@ -171,11 +171,11 @@ export function Footer() {
                   info@yampmc.com
                 </a>
                 <a
-                  href="tel:+97140000000"
+                  href="tel:+97142838250"
                   className="group flex w-fit items-center gap-2.5 rounded-sm transition-colors hover:text-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold/60 focus-visible:ring-offset-2 focus-visible:ring-offset-navy-deep"
                 >
                   <Phone className="size-3.5 text-gold/70 transition-colors group-hover:text-gold" aria-hidden="true" />
-                  +971 4 000 0000
+                  (04) 283 8250
                 </a>
                 <span className="flex items-start gap-2.5">
                   <MapPin className="mt-0.5 size-3.5 shrink-0 text-gold/70" aria-hidden="true" />

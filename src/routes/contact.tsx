@@ -63,8 +63,8 @@ const details = [
   {
     icon: Phone,
     label: "Phone",
-    value: "+971 4 000 0000",
-    href: "tel:+97140000000",
+    value: "(04) 283 8250",
+    href: "tel:+97142838250",
     copyable: true,
   },
   {
