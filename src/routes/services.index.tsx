@@ -1,4 +1,4 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+﻿import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
 import { PageHero } from "@/components/sections/PageHero";
 import { SectionHeading } from "@/components/ui/section-heading";
@@ -13,13 +13,13 @@ import boardroom from "@/assets/hero-5-digital.jpg";
 export const Route = createFileRoute("/services/")({
   head: () => ({
     meta: [
-      { title: "Services | Project Management & PMO Consulting — YAM" },
+      { title: "Services | Project Management & PMO Consulting — Yam" },
       {
         name: "description",
         content:
-          "Explore YAM's project management services: PMO consulting, cost management, QA/QC, risk management, digital project management and project controls across the UAE.",
+          "Explore Yam's project management services: PMO consulting, cost management, QA/QC, risk management, digital project management and project controls across the UAE.",
       },
-      { property: "og:title", content: "Services — YAM Management Services" },
+      { property: "og:title", content: "Services — Yam Group of Companies" },
       {
         property: "og:description",
         content: "Seven integrated project management disciplines engineered for delivery certainty.",

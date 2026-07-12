@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+﻿import { createFileRoute } from "@tanstack/react-router";
 import { HeroSlider } from "@/components/sections/HeroSlider";
 import { TrustStrip } from "@/components/sections/TrustStrip";
 import { HomeAbout } from "@/components/sections/HomeAbout";
@@ -16,7 +16,7 @@ export const Route = createFileRoute("/")({
         children: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "ProfessionalService",
-          name: "YAM Management Services",
+          name: "Yam Group of Companies",
           description:
             "Premium project management consultancy in Dubai, UAE specialising in project management, PMO consulting, cost management, QA/QC, risk management and digital project management.",
           areaServed: "United Arab Emirates",

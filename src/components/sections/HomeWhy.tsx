@@ -16,7 +16,7 @@ export function HomeWhy() {
         <SectionHeading
           light
           align="center"
-          eyebrow="Why YAM"
+          eyebrow="Why Yam"
           title="The advantages that set us apart"
           description="We combine the discipline of a global consultancy with the agility and dedication of a trusted local partner."
           className="mx-auto"

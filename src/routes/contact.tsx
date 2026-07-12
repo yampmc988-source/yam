@@ -1,4 +1,4 @@
-import { useState } from "react";
+﻿import { useState } from "react";
 import { createFileRoute } from "@tanstack/react-router";
 import { motion } from "framer-motion";
 import {
@@ -30,13 +30,13 @@ import contactImg from "@/assets/contact-office.jpg";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact | YAM Management Services — Dubai, UAE" },
+      { title: "Contact | Yam Group of Companies — Dubai, UAE" },
       {
         name: "description",
         content:
-          "Contact YAM Management Services in Dubai to discuss your project. Request a consultation with our project management consultants across the UAE.",
+          "Contact Yam Group of Companies in Dubai to discuss your project. Request a consultation with our project management consultants across the UAE.",
       },
-      { property: "og:title", content: "Contact YAM Management Services" },
+      { property: "og:title", content: "Contact Yam Group of Companies" },
       { property: "og:description", content: "Request a consultation with our Dubai-based project management consultants." },
       { property: "og:url", content: "/contact" },
     ],
@@ -219,7 +219,7 @@ function ContactPage() {
                 on budget, and to the standard our clients expect."
               </p>
               <p className="relative mt-4 text-xs font-semibold uppercase tracking-[0.14em] text-gold">
-                YAM Management Services
+                Yam Group of Companies
               </p>
             </div>
           </Reveal>
@@ -238,7 +238,7 @@ function ContactPage() {
                   </span>
                   <h3 className="mt-6 text-2xl font-bold text-navy">Enquiry received</h3>
                   <p className="mt-3 max-w-sm text-muted-foreground">
-                    Thank you for reaching out to YAM Management Services. A member of our team will contact you
+                    Thank you for reaching out to Yam Group of Companies. A member of our team will contact you
                     shortly to arrange your consultation.
                   </p>
                   <div className="mt-8 w-full max-w-xs space-y-3 rounded-2xl bg-navy-deep/[0.03] p-5 text-left">
@@ -376,7 +376,7 @@ function ContactPage() {
         <div className="container-lux">
           <Reveal className="relative overflow-hidden rounded-3xl border border-border shadow-soft">
             <iframe
-              title="YAM Management Services office location in Dubai"
+              title="Yam Group of Companies office location in Dubai"
               src="https://www.google.com/maps?q=Fairlink+Building+Al+Khubaisi+Dubai&output=embed"
               className="h-[420px] w-full grayscale-[15%]"
               loading="lazy"

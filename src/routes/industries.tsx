@@ -1,4 +1,4 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+﻿import { createFileRoute, Link } from "@tanstack/react-router";
 import { motion } from "framer-motion";
 import { CheckCircle2, AlertCircle, Lightbulb, TrendingUp, ArrowRight, ArrowUpRight } from "lucide-react";
 import { PageHero } from "@/components/sections/PageHero";
@@ -10,13 +10,13 @@ import heroImg from "@/assets/hero-1-dubai.jpg";
 export const Route = createFileRoute("/industries")({
   head: () => ({
     meta: [
-      { title: "Industries | Construction, Energy & Technology — YAM" },
+      { title: "Industries | Construction, Energy & Technology — Yam" },
       {
         name: "description",
         content:
-          "YAM delivers project management expertise across construction, real estate, manufacturing, oil & gas and technology sectors throughout the UAE.",
+          "Yam delivers project management expertise across construction, real estate, manufacturing, oil & gas and technology sectors throughout the UAE.",
       },
-      { property: "og:title", content: "Industries We Serve — YAM Management Services" },
+      { property: "og:title", content: "Industries We Serve — Yam Group of Companies" },
       {
         property: "og:description",
         content: "Sector-specific project management expertise across the industries that build the UAE.",

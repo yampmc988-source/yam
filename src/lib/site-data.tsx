@@ -1,4 +1,4 @@
-import {
+﻿import {
   ClipboardList,
   LayoutDashboard,
   Wallet,
@@ -56,7 +56,7 @@ export const services: Service[] = [
     icon: ClipboardList,
     image: heroConstruction,
     overview:
-      "YAM provides senior project management leadership across the entire project lifecycle. We integrate planning, procurement, delivery and closeout into a single governed system — giving stakeholders complete visibility and absolute confidence that landmark projects are delivered on time, within budget and to the highest standards of quality.",
+      "Yam provides senior project management leadership across the entire project lifecycle. We integrate planning, procurement, delivery and closeout into a single governed system — giving stakeholders complete visibility and absolute confidence that landmark projects are delivered on time, within budget and to the highest standards of quality.",
     benefits: [
       { title: "Predictable delivery", text: "Rigorous baselines and earned-value control keep projects on schedule and on budget." },
       { title: "Single point of accountability", text: "One empowered leadership team owning outcomes across every discipline." },
@@ -91,7 +91,7 @@ export const services: Service[] = [
     icon: LayoutDashboard,
     image: aboutCollab,
     overview:
-      "A high-performing PMO is the nervous system of an organisation's delivery capability. YAM designs, implements and matures PMOs — from governance frameworks and reporting standards to talent models and enabling technology — ensuring every project in the portfolio is aligned to strategy and delivered with discipline.",
+      "A high-performing PMO is the nervous system of an organisation's delivery capability. Yam designs, implements and matures PMOs — from governance frameworks and reporting standards to talent models and enabling technology — ensuring every project in the portfolio is aligned to strategy and delivered with discipline.",
     benefits: [
       { title: "Portfolio visibility", text: "One source of truth for the health of every initiative in your portfolio." },
       { title: "Standardised delivery", text: "Consistent methods, templates and gates across all teams." },
@@ -126,7 +126,7 @@ export const services: Service[] = [
     icon: Wallet,
     image: heroDigital,
     overview:
-      "YAM delivers rigorous cost and commercial management across the project lifecycle. From feasibility estimates and value engineering to procurement, cost control and final account, we protect your investment with transparent, forecast-driven commercial governance that turns budgets into guarantees.",
+      "Yam delivers rigorous cost and commercial management across the project lifecycle. From feasibility estimates and value engineering to procurement, cost control and final account, we protect your investment with transparent, forecast-driven commercial governance that turns budgets into guarantees.",
     benefits: [
       { title: "Cost certainty", text: "Accurate estimating and forecasting eliminate budget surprises." },
       { title: "Value engineering", text: "Optimise design and specification without compromising quality." },
@@ -161,7 +161,7 @@ export const services: Service[] = [
     icon: ShieldCheck,
     image: indConstruction,
     overview:
-      "Quality is never an accident. YAM embeds structured quality assurance and quality control across design, procurement and construction — combining ISO-aligned systems, rigorous inspection regimes and data-driven audits to ensure every deliverable meets specification, code and client expectation the first time.",
+      "Quality is never an accident. Yam embeds structured quality assurance and quality control across design, procurement and construction — combining ISO-aligned systems, rigorous inspection regimes and data-driven audits to ensure every deliverable meets specification, code and client expectation the first time.",
     benefits: [
       { title: "Defect-free delivery", text: "Structured inspection and test plans catch issues before they escalate." },
       { title: "Regulatory compliance", text: "Full alignment with local authority and international standards." },
@@ -196,7 +196,7 @@ export const services: Service[] = [
     icon: AlertTriangle,
     image: heroBoardroom,
     overview:
-      "Complex projects fail on unmanaged risk. YAM installs enterprise risk management that identifies, quantifies and mitigates threats across schedule, cost, safety and reputation. Using qualitative and quantitative analysis, we transform uncertainty into informed decisions — protecting outcomes and preserving stakeholder trust.",
+      "Complex projects fail on unmanaged risk. Yam installs enterprise risk management that identifies, quantifies and mitigates threats across schedule, cost, safety and reputation. Using qualitative and quantitative analysis, we transform uncertainty into informed decisions — protecting outcomes and preserving stakeholder trust.",
     benefits: [
       { title: "Early warning", text: "Structured registers surface threats long before they materialise." },
       { title: "Quantified exposure", text: "Monte Carlo analysis reveals true cost and schedule risk." },
@@ -231,7 +231,7 @@ export const services: Service[] = [
     icon: MonitorSmartphone,
     image: indTechnology,
     overview:
-      "YAM digitises the way projects are planned and delivered. We integrate BIM, common data environments, real-time dashboards, automation and AI-driven analytics into a single connected ecosystem — giving leaders live insight, predictive foresight and a decisive competitive edge across every phase of delivery.",
+      "Yam digitises the way projects are planned and delivered. We integrate BIM, common data environments, real-time dashboards, automation and AI-driven analytics into a single connected ecosystem — giving leaders live insight, predictive foresight and a decisive competitive edge across every phase of delivery.",
     benefits: [
       { title: "Live visibility", text: "Real-time dashboards replace outdated monthly reports." },
       { title: "Predictive insight", text: "AI analytics forecast risk and performance trends." },
@@ -266,7 +266,7 @@ export const services: Service[] = [
     icon: GanttChartSquare,
     image: heroDubai,
     overview:
-      "YAM provides the analytical backbone of successful delivery. Our project controls specialists build integrated schedules, earned-value systems and forecasting models that measure true progress, expose deviations early and give leadership the data-driven control needed to steer complex programmes to success.",
+      "Yam provides the analytical backbone of successful delivery. Our project controls specialists build integrated schedules, earned-value systems and forecasting models that measure true progress, expose deviations early and give leadership the data-driven control needed to steer complex programmes to success.",
     benefits: [
       { title: "Integrated baseline", text: "Unified scope, time and cost baselines for true control." },
       { title: "Earned-value clarity", text: "Objective measurement of performance and forecast." },
@@ -316,7 +316,7 @@ export const industries: Industry[] = [
     icon: Building2,
     image: indConstruction,
     overview:
-      "From landmark towers to complex civil works, YAM brings disciplined leadership to construction projects where time, cost and quality cannot be compromised.",
+      "From landmark towers to complex civil works, Yam brings disciplined leadership to construction projects where time, cost and quality cannot be compromised.",
     challenges: ["Tight programmes and margins", "Complex stakeholder coordination", "Quality and safety compliance", "Scope and change volatility"],
     solutions: ["Integrated project management and controls", "Rigorous cost and commercial governance", "ISO-aligned QA/QC regimes", "Proactive risk mitigation"],
     benefits: ["On-time, on-budget delivery", "Defect-free handover", "Full commercial protection", "Executive-grade transparency"],
@@ -327,7 +327,7 @@ export const industries: Industry[] = [
     icon: Home,
     image: indRealEstate,
     overview:
-      "For developers and investors, YAM protects asset value from feasibility to handover — de-risking capital and maximising return on every development.",
+      "For developers and investors, Yam protects asset value from feasibility to handover — de-risking capital and maximising return on every development.",
     challenges: ["Capital efficiency pressure", "Speed to market", "Design and specification control", "Investor reporting demands"],
     solutions: ["Feasibility and cost planning", "Development management", "Value engineering", "Live portfolio dashboards"],
     benefits: ["Maximised ROI", "Reduced capital risk", "Faster time to market", "Investor-grade transparency"],
@@ -338,7 +338,7 @@ export const industries: Industry[] = [
     icon: Factory,
     image: indManufacturing,
     overview:
-      "YAM manages capital projects and facility expansions for manufacturers, delivering new capacity safely, efficiently and without disrupting operations.",
+      "Yam manages capital projects and facility expansions for manufacturers, delivering new capacity safely, efficiently and without disrupting operations.",
     challenges: ["Operational continuity", "Complex plant integration", "Strict compliance regimes", "Capital cost discipline"],
     solutions: ["Capital project management", "Rigorous QA/QC", "Risk and safety governance", "Cost and schedule control"],
     benefits: ["Uninterrupted operations", "Reliable capacity delivery", "Full compliance assurance", "Controlled capital spend"],
@@ -349,7 +349,7 @@ export const industries: Industry[] = [
     icon: Fuel,
     image: heroEnergy,
     overview:
-      "In high-stakes energy environments, YAM delivers the governance, controls and risk discipline needed to manage complex industrial projects with confidence.",
+      "In high-stakes energy environments, Yam delivers the governance, controls and risk discipline needed to manage complex industrial projects with confidence.",
     challenges: ["Extreme complexity and scale", "Stringent HSE requirements", "High-consequence risk", "Multi-contractor coordination"],
     solutions: ["Integrated project controls", "Quantitative risk management", "Robust QA/QC", "Commercial and contract governance"],
     benefits: ["Predictable delivery at scale", "Reduced risk exposure", "Regulatory compliance", "Cost and schedule certainty"],
@@ -360,7 +360,7 @@ export const industries: Industry[] = [
     icon: Cpu,
     image: indTechnology,
     overview:
-      "YAM brings structured delivery to technology and digital infrastructure programmes — aligning agile execution with enterprise governance and outcomes.",
+      "Yam brings structured delivery to technology and digital infrastructure programmes — aligning agile execution with enterprise governance and outcomes.",
     challenges: ["Rapid change and scope evolution", "Aligning agile with governance", "Data and integration complexity", "Benefits realisation"],
     solutions: ["Digital project management", "Enterprise PMO frameworks", "Data-driven controls", "Benefits tracking"],
     benefits: ["Faster, predictable delivery", "Strategic alignment", "Connected, live data", "Measurable business value"],
@@ -400,9 +400,9 @@ export const whyYam = [
 ];
 
 export const generalFaqs: ServiceFAQ[] = [
-  { q: "What does YAM Management Services do?", a: "YAM is a premium project management consultancy based in Dubai, UAE. We specialise in project management, PMO consulting, cost management, QA/QC, risk management, digital project management and project controls across the region." },
+  { q: "What does Yam Group of Companies do?", a: "Yam is a premium project management consultancy based in Dubai, UAE. We specialise in project management, PMO consulting, cost management, QA/QC, risk management, digital project management and project controls across the region." },
   { q: "Which industries do you serve?", a: "We serve construction, real estate, manufacturing, oil & gas, technology and government organisations, as well as infrastructure firms and enterprise businesses across the UAE." },
-  { q: "Where is YAM based?", a: "We are headquartered in Dubai, United Arab Emirates, and deliver engagements across the UAE and wider Middle East." },
+  { q: "Where is Yam based?", a: "We are headquartered in Dubai, United Arab Emirates, and deliver engagements across the UAE and wider Middle East." },
   { q: "Do you work with government organisations?", a: "Yes. We regularly partner with government entities and public-sector organisations, delivering the governance and transparency the public sector demands." },
   { q: "What size of projects do you manage?", a: "From focused fit-outs to multi-billion-dirham infrastructure and energy programmes — we scale our governance model to the mandate." },
   { q: "Can you take over a project that is already in trouble?", a: "Absolutely. We conduct a rapid health-check, stabilise the baseline and re-establish control, often within a matter of weeks." },
@@ -411,7 +411,7 @@ export const generalFaqs: ServiceFAQ[] = [
   { q: "How do you manage project risk?", a: "We build structured risk registers, run qualitative and quantitative (Monte Carlo) analysis, assign mitigation owners and monitor exposure continuously." },
   { q: "What technologies do you use?", a: "We work with Primavera P6, MS Project, Power BI, Autodesk BIM 360, Procore, SAP and bespoke AI analytics — integrated to fit your environment." },
   { q: "Do you provide digital transformation services?", a: "Yes. Our digital project management practice connects BIM, common data environments, live dashboards, automation and AI into one intelligent ecosystem." },
-  { q: "How is YAM different from other consultancies?", a: "We combine senior-led delivery, data-driven governance, deep sector expertise and genuine UAE market mastery — with a client-focused methodology tailored to each engagement." },
+  { q: "How is Yam different from other consultancies?", a: "We combine senior-led delivery, data-driven governance, deep sector expertise and genuine UAE market mastery — with a client-focused methodology tailored to each engagement." },
   { q: "How do we get started?", a: "Request a consultation through our contact page. We will arrange a discovery conversation to understand your objectives and recommend the right approach." },
   { q: "Do you offer independent assurance?", a: "Yes — we provide independent cost verification, schedule assurance and project health-checks for owners, lenders and boards." },
   { q: "What are your typical engagement models?", a: "We work as embedded delivery partners, advisory consultants, or independent assurance providers — structured to suit your needs." },

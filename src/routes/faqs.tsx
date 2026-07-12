@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useRef, useState } from "react";
+﻿import { useEffect, useMemo, useRef, useState } from "react";
 import { createFileRoute } from "@tanstack/react-router";
 import { Search, X, MessageCircleQuestion, ArrowRight } from "lucide-react";
 import { PageHero } from "@/components/sections/PageHero";
@@ -17,14 +17,14 @@ import heroImg from "@/assets/hero-3-boardroom.jpg";
 export const Route = createFileRoute("/faqs")({
   head: () => ({
     meta: [
-      { title: "FAQs | YAM Management Services" },
+      { title: "FAQs | Yam Group of Companies" },
       {
         name: "description",
         content:
-          "Answers to common questions about YAM Management Services — our project management consultancy, industries, engagement models and methodology in the UAE.",
+          "Answers to common questions about Yam Group of Companies — our project management consultancy, industries, engagement models and methodology in the UAE.",
       },
-      { property: "og:title", content: "Frequently Asked Questions — YAM" },
-      { property: "og:description", content: "Everything you need to know about working with YAM Management Services." },
+      { property: "og:title", content: "Frequently Asked Questions — Yam" },
+      { property: "og:description", content: "Everything you need to know about working with Yam Group of Companies." },
       { property: "og:url", content: `https://yampmc.com/faqs` },
     ],
     links: [{ rel: "canonical", href: `https://yampmc.com/faqs` }],

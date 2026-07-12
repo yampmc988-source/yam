@@ -1,4 +1,4 @@
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+﻿import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import {
   Outlet,
   Link,
@@ -80,21 +80,21 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "YAM Management Services | Project Management Consultancy in Dubai" },
+      { title: "Yam Group of Companies | Project Management Consultancy in Dubai" },
       {
         name: "description",
         content:
-          "YAM Management Services is a premium project management consultancy in Dubai, UAE — delivering PMO consulting, cost management, QA/QC, risk management and digital project management across the Middle East.",
+          "Yam Group of Companies is a premium project management consultancy in Dubai, UAE — delivering PMO consulting, cost management, QA/QC, risk management and digital project management across the Middle East.",
       },
-      { name: "author", content: "YAM Management Services" },
-      { property: "og:title", content: "YAM Management Services | Project Management Consultancy in Dubai" },
+      { name: "author", content: "Yam Group of Companies" },
+      { property: "og:title", content: "Yam Group of Companies | Project Management Consultancy in Dubai" },
       {
         property: "og:description",
         content:
           "Premium project management, PMO consulting, cost management, QA/QC, risk and digital transformation for enterprise and government across the UAE.",
       },
       { property: "og:type", content: "website" },
-      { property: "og:site_name", content: "YAM Management Services" },
+      { property: "og:site_name", content: "Yam Group of Companies" },
       { property: "og:url", content: SITE_URL },
       { property: "og:image", content: OG_IMAGE_URL },
       { property: "og:image:secure_url", content: OG_IMAGE_URL },
@@ -103,11 +103,11 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:image:height", content: "630" },
       {
         property: "og:image:alt",
-        content: "YAM Management Services — Project Management Consultancy in Dubai",
+        content: "Yam Group of Companies — Project Management Consultancy in Dubai",
       },
       { property: "og:locale", content: "en_US" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "YAM Management Services | Project Management Consultancy in Dubai" },
+      { name: "twitter:title", content: "Yam Group of Companies | Project Management Consultancy in Dubai" },
       {
         name: "twitter:description",
         content:

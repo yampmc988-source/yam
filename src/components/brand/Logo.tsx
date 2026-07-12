@@ -1,5 +1,5 @@
-import { Link } from "@tanstack/react-router";
-import logo from "@/assets/yam-logo.png";
+﻿import { Link } from "@tanstack/react-router";
+import logo from "@/assets/Yam-logo.png";
 import { cn } from "@/lib/utils";
 
 interface LogoProps {
@@ -12,7 +12,7 @@ export function Logo({ variant = "dark", className }: LogoProps) {
     <Link
       to="/"
       className={cn("group relative flex items-center perspective-midrange", className)}
-      aria-label="YAM Management Services — home"
+      aria-label="Yam Group of Companies — home"
     >
       {/* Hover glow */}
       <span
@@ -29,7 +29,7 @@ export function Logo({ variant = "dark", className }: LogoProps) {
       >
         <img
           src={logo}
-          alt="YAM Management Services"
+          alt="Yam Group of Companies"
           width={64}
           height={60}
           className={cn(

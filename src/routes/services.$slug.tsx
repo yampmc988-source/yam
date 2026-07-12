@@ -1,4 +1,4 @@
-import { createFileRoute, Link, notFound } from "@tanstack/react-router";
+﻿import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { motion } from "framer-motion";
 import { ArrowRight, ArrowUpRight, CheckCircle2, Cpu, Target, ShieldCheck, TrendingUp, Gauge } from "lucide-react";
 import { PageHero } from "@/components/sections/PageHero";
@@ -28,9 +28,9 @@ export const Route = createFileRoute("/services/$slug")({
     if (!s) return {};
     return {
       meta: [
-        { title: `${s.title} | YAM Management Services` },
+        { title: `${s.title} | Yam Group of Companies` },
         { name: "description", content: s.short },
-        { property: "og:title", content: `${s.title} — YAM Management Services` },
+        { property: "og:title", content: `${s.title} — Yam Group of Companies` },
         { property: "og:description", content: s.short },
         { property: "og:image", content: s.image },
         { property: "og:type", content: "article" },

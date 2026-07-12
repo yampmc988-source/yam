@@ -1,4 +1,4 @@
-import { Link } from "@tanstack/react-router";
+﻿import { Link } from "@tanstack/react-router";
 import { motion, useReducedMotion } from "framer-motion";
 import {
   ArrowRight,
@@ -200,7 +200,7 @@ export function Footer() {
 
       <div className="container-lux relative">
         <div className="flex flex-col items-center justify-between gap-4 py-8 text-xs tracking-wide text-white/50 md:flex-row">
-          <p>© {new Date().getFullYear()} YAM Management Services. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Yam Group of Companies. All rights reserved.</p>
           <p className="text-white/40">Dubai, UAE · Premium Project Management Consultancy</p>
           <div className="flex items-center gap-8">
             <Link
@@ -246,7 +246,7 @@ function CtaBand({
       <div>
         <span className="mb-4 flex items-center gap-3 font-display text-xs font-semibold uppercase tracking-[0.28em] text-gold">
           <span className="h-px w-8 bg-gold/60" aria-hidden="true" />
-          Scale with YAM
+          Scale with Yam
         </span>
         <h3 className="font-display max-w-2xl text-3xl font-semibold leading-[1.15] tracking-tight text-white sm:text-4xl lg:text-5xl">
           Ready to bring precision to your{" "}

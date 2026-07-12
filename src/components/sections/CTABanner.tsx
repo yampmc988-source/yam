@@ -11,7 +11,7 @@ interface CTABannerProps {
 
 export function CTABanner({
   title = "Let's deliver your next landmark project.",
-  description = "Partner with a consultancy that treats your objectives as its own. Request a consultation and discover the YAM difference.",
+  description = "Partner with a consultancy that treats your objectives as its own. Request a consultation and discover the Yam difference.",
 }: CTABannerProps) {
   return (
     <section className="container-lux py-24">

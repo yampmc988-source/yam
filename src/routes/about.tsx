@@ -1,4 +1,4 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+﻿import { createFileRoute, Link } from "@tanstack/react-router";
 import { motion } from "framer-motion";
 import { ArrowRight, Compass, Eye, Quote } from "lucide-react";
 import { PageHero } from "@/components/sections/PageHero";
@@ -16,13 +16,13 @@ import boardroom from "@/assets/hero-3-boardroom.jpg";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About YAM Management Services | Dubai Project Consultancy" },
+      { title: "About Yam Group of Companies | Dubai Project Consultancy" },
       {
         name: "description",
         content:
-          "Learn about YAM Management Services — a Dubai-based project management consultancy delivering senior-led governance, cost control and digital transformation across the UAE.",
+          "Learn about Yam Group of Companies — a Dubai-based project management consultancy delivering senior-led governance, cost control and digital transformation across the UAE.",
       },
-      { property: "og:title", content: "About YAM Management Services" },
+      { property: "og:title", content: "About Yam Group of Companies" },
       {
         property: "og:description",
         content: "Senior-led project management leadership trusted across the UAE's most ambitious projects.",
@@ -39,7 +39,7 @@ function AboutPage() {
     <>
       <PageHero
         image={boardroom}
-        eyebrow="About YAM"
+        eyebrow="About Yam"
         title="Precision leadership for the region's landmark projects"
         description="We are a Dubai-based consultancy built on a simple conviction: that disciplined governance and genuine partnership turn complexity into confidence."
         breadcrumb={[{ label: "Home", to: "/" }, { label: "About" }]}
@@ -57,7 +57,7 @@ function AboutPage() {
             </h2>
             <div className="mt-6 space-y-5 text-base leading-relaxed text-muted-foreground">
               <p>
-                YAM Management Services was established to bring a new level of rigour, transparency and
+                Yam Group of Companies was established to bring a new level of rigour, transparency and
                 intelligence to project management across the United Arab Emirates. We saw ambitious projects
                 held back not by a lack of vision, but by fragmented governance and reactive delivery.
               </p>
@@ -78,7 +78,7 @@ function AboutPage() {
               <div className="overflow-hidden rounded-3xl">
                 <motion.img
                   src={aboutImg}
-                  alt="YAM leadership collaborating in a modern office"
+                  alt="Yam leadership collaborating in a modern office"
                   loading="lazy"
                   className="aspect-[4/3] w-full object-cover"
                   initial={{ scale: 1.1 }}
@@ -190,7 +190,7 @@ function AboutPage() {
               our clients' success. Every project is a promise, and we honour it with discipline."
             </blockquote>
             <p className="mt-8 text-sm font-semibold uppercase tracking-[0.2em] text-gold-light">
-              The YAM Leadership Philosophy
+              The Yam Leadership Philosophy
             </p>
           </Reveal>
         </div>
@@ -199,7 +199,7 @@ function AboutPage() {
       {/* Why choose + stats */}
       <section className="container-lux py-24 perspective-midrange">
         <SectionHeading
-          eyebrow="Why Choose YAM"
+          eyebrow="Why Choose Yam"
           title="Reasons the region's leaders trust us with their most critical work"
         />
         <div className="mt-14 grid gap-12 lg:grid-cols-2">

@@ -1,4 +1,4 @@
-import { Link } from "@tanstack/react-router";
+﻿import { Link } from "@tanstack/react-router";
 import { motion } from "framer-motion";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 import { Reveal } from "@/components/ui/reveal";
@@ -23,7 +23,7 @@ export function HomeAbout() {
             <div className="relative overflow-hidden rounded-3xl">
               <motion.img
                 src={aboutImg}
-                alt="YAM consultants collaborating on a project plan"
+                alt="Yam consultants collaborating on a project plan"
                 loading="lazy"
                 className="aspect-[4/3] w-full object-cover"
                 initial={{ scale: 1.1 }}
@@ -61,7 +61,7 @@ export function HomeAbout() {
               A trusted partner for the region's most ambitious projects
             </h2>
             <p className="mt-6 text-base leading-relaxed text-muted-foreground sm:text-lg">
-              YAM Management Services is a premium project management consultancy headquartered in Dubai. We
+              Yam Group of Companies is a premium project management consultancy headquartered in Dubai. We
               bring senior-led leadership, rigorous governance and digital intelligence to the organisations
               shaping the UAE's built environment, energy landscape and digital future.
             </p>

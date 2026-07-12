@@ -1,4 +1,4 @@
-@import "tailwindcss" source(none);
+﻿@import "tailwindcss" source(none);
 @import "@fontsource-variable/sora";
 @import "@fontsource-variable/manrope";
 @source "../src";
@@ -7,7 +7,7 @@
 @custom-variant dark (&:is(.dark *));
 
 /*
- * YAM Management Services — Luxury Enterprise Design System
+ * Yam Group of Companies — Luxury Enterprise Design System
  * Palette derived from the brand logo: deep navy blue + metallic gold on bright, clean surfaces.
  * All colors use oklch. Bright by default; dark reserved for the footer accent only.
  */
