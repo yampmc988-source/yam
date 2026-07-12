@@ -1,4 +1,4 @@
-﻿import { useState } from "react";
+import { useState } from "react";
 import { createFileRoute } from "@tanstack/react-router";
 import { motion } from "framer-motion";
 import {
@@ -16,6 +16,7 @@ import {
   Check,
   Navigation,
   Quote,
+  ShieldCheck,
 } from "lucide-react";
 import { PageHero } from "@/components/sections/PageHero";
 import { Reveal } from "@/components/ui/reveal";
@@ -48,10 +49,35 @@ export const Route = createFileRoute("/contact")({
 const details = [
   {
     icon: MapPin,
-    label: "Office",
+    label: "Dubai, UAE Office",
     value: "Office 01, Fairlink Bldg., Behind Jetour Showroom, Al Khubaisi, Dubai, UAE",
     href: "https://www.google.com/maps?q=Fairlink+Building+Al+Khubaisi+Dubai",
     copyable: false,
+    external: true,
+  },
+  {
+    icon: Phone,
+    label: "Dubai Phone",
+    value: "(04) 283 8250",
+    href: "tel:+97142838250",
+    copyable: true,
+    external: false,
+  },
+  {
+    icon: MapPin,
+    label: "Austin, TX, USA Office",
+    value: "5900 Balcones Drive, #STE 100, Austin, TX 78731, USA",
+    href: "https://www.google.com/maps?q=5900+Balcones+Drive+STE+100+Austin+TX+78731",
+    copyable: false,
+    external: true,
+  },
+  {
+    icon: Phone,
+    label: "US Phone",
+    value: "+1 512-760-8864",
+    href: "tel:+15127608864",
+    copyable: true,
+    external: false,
   },
   {
     icon: Mail,
@@ -59,13 +85,7 @@ const details = [
     value: "info@yampmc.com",
     href: "mailto:info@yampmc.com",
     copyable: true,
-  },
-  {
-    icon: Phone,
-    label: "Phone",
-    value: "(04) 283 8250",
-    href: "tel:+97142838250",
-    copyable: true,
+    external: false,
   },
   {
     icon: Clock,
@@ -73,6 +93,43 @@ const details = [
     value: "Sun–Thu · 9:00 AM – 6:00 PM (GST)",
     href: undefined,
     copyable: false,
+    external: false,
+  },
+];
+
+// License details for YAM Universal - F.Z.E, the entity behind the US office.
+const license = {
+  entity: "YAM Universal - F.Z.E",
+  fields: [
+    { label: "License No.", value: "55811", wide: false },
+    { label: "Registration No.", value: "55811", wide: false },
+    { label: "Legal form", value: "Free Zone Establishment - Limited Liability", wide: true },
+    {
+      label: "Jurisdiction",
+      value: "Free Zones Authority of Ajman, Ajman Free Zone, UAE",
+      wide: true,
+    },
+    { label: "Issued", value: "July 10, 2026", wide: false },
+    { label: "Valid until", value: "July 9, 2027", wide: false },
+  ],
+};
+
+const officeMaps = [
+  {
+    label: "Dubai, UAE Office",
+    title: "YAM Management Services office location in Dubai",
+    embed: "https://www.google.com/maps?q=Fairlink+Building+Al+Khubaisi+Dubai&output=embed",
+    directions: "https://www.google.com/maps?q=Fairlink+Building+Al+Khubaisi+Dubai",
+    line1: "Fairlink Bldg., Al Khubaisi, Dubai",
+    line2: "United Arab Emirates",
+  },
+  {
+    label: "Austin, TX, USA Office",
+    title: "YAM Universal LLC office location in Austin, Texas",
+    embed: "https://www.google.com/maps?q=5900+Balcones+Drive+STE+100+Austin+TX+78731&output=embed",
+    directions: "https://www.google.com/maps?q=5900+Balcones+Drive+STE+100+Austin+TX+78731",
+    line1: "5900 Balcones Drive, #STE 100, Austin, TX",
+    line2: "United States",
   },
 ];
 
@@ -183,8 +240,8 @@ function ContactPage() {
                     {d.href ? (
                       <a
                         href={d.href}
-                        target={d.label === "Office" ? "_blank" : undefined}
-                        rel={d.label === "Office" ? "noreferrer" : undefined}
+                        target={d.external ? "_blank" : undefined}
+                        rel={d.external ? "noreferrer" : undefined}
                         className="text-base font-semibold text-navy transition-colors hover:text-gold-deep"
                       >
                         {d.value}
@@ -209,6 +266,31 @@ function ContactPage() {
                   )}
                 </div>
               ))}
+            </div>
+
+            {/* Licensing & Registration */}
+            <div className="card-lux mt-8 p-6 sm:p-7">
+              <div className="flex items-start gap-4">
+                <span className="flex size-11 shrink-0 items-center justify-center rounded-xl bg-gradient-navy text-gold">
+                  <ShieldCheck className="size-5" />
+                </span>
+                <div className="min-w-0">
+                  <p className="text-xs font-semibold uppercase tracking-[0.14em] text-muted-foreground">
+                    Licensing &amp; Registration
+                  </p>
+                  <p className="text-base font-semibold text-navy">{license.entity}</p>
+                </div>
+              </div>
+              <dl className="mt-6 grid grid-cols-1 gap-x-6 gap-y-5 sm:grid-cols-2">
+                {license.fields.map((f) => (
+                  <div key={f.label} className={f.wide ? "sm:col-span-2" : undefined}>
+                    <dt className="text-[0.7rem] font-semibold uppercase tracking-[0.14em] text-muted-foreground">
+                      {f.label}
+                    </dt>
+                    <dd className="mt-1 text-sm font-semibold text-navy">{f.value}</dd>
+                  </div>
+                ))}
+              </dl>
             </div>
 
             {/* Pull quote */}
@@ -371,36 +453,44 @@ function ContactPage() {
         </div>
       </section>
 
-      {/* Map */}
+      {/* Maps */}
       <section className="pb-24">
-        <div className="container-lux">
-          <Reveal className="relative overflow-hidden rounded-3xl border border-border shadow-soft">
-            <iframe
-              title="Yam Group of Companies office location in Dubai"
-              src="https://www.google.com/maps?q=Fairlink+Building+Al+Khubaisi+Dubai&output=embed"
-              className="h-[420px] w-full grayscale-[15%]"
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-            />
-            <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-navy-deep/40 via-transparent to-transparent" />
-            <div className="card-lux pointer-events-auto absolute bottom-5 left-5 right-5 flex flex-col gap-4 p-5 backdrop-blur-md sm:right-auto sm:max-w-sm sm:flex-row sm:items-center">
-              <span className="flex size-11 shrink-0 items-center justify-center rounded-xl bg-gradient-gold text-navy-deep">
-                <MapPin className="size-5" />
-              </span>
-              <div className="min-w-0">
-                <p className="text-sm font-semibold text-navy">Fairlink Bldg., Al Khubaisi, Dubai</p>
-                <p className="text-xs text-muted-foreground">United Arab Emirates</p>
+        <div className="container-lux grid gap-6 lg:grid-cols-2">
+          {officeMaps.map((o) => (
+            <Reveal
+              key={o.label}
+              className="relative overflow-hidden rounded-3xl border border-border shadow-soft"
+            >
+              <iframe
+                title={o.title}
+                src={o.embed}
+                className="h-[420px] w-full grayscale-[15%]"
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
+              <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-navy-deep/40 via-transparent to-transparent" />
+              <div className="card-lux pointer-events-auto absolute bottom-5 left-5 right-5 flex flex-col gap-4 p-5 backdrop-blur-md sm:flex-row sm:items-center">
+                <span className="flex size-11 shrink-0 items-center justify-center rounded-xl bg-gradient-gold text-navy-deep">
+                  <MapPin className="size-5" />
+                </span>
+                <div className="min-w-0">
+                  <p className="text-xs font-semibold uppercase tracking-[0.12em] text-gold-deep">
+                    {o.label}
+                  </p>
+                  <p className="text-sm font-semibold text-navy">{o.line1}</p>
+                  <p className="text-xs text-muted-foreground">{o.line2}</p>
+                </div>
+                <a
+                  href={o.directions}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="ml-auto flex shrink-0 items-center gap-1.5 rounded-lg bg-navy px-3 py-2 text-xs font-semibold text-gold transition-colors hover:bg-navy-deep"
+                >
+                  Directions <Navigation className="size-3.5" />
+                </a>
               </div>
-              <a
-                href="https://www.google.com/maps?q=Fairlink+Building+Al+Khubaisi+Dubai"
-                target="_blank"
-                rel="noreferrer"
-                className="ml-auto flex shrink-0 items-center gap-1.5 rounded-lg bg-navy px-3 py-2 text-xs font-semibold text-gold transition-colors hover:bg-navy-deep"
-              >
-                Directions <Navigation className="size-3.5" />
-              </a>
-            </div>
-          </Reveal>
+            </Reveal>
+          ))}
         </div>
       </section>
     </>

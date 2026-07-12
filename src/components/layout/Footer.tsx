@@ -1,4 +1,4 @@
-﻿import { Link } from "@tanstack/react-router";
+import { Link } from "@tanstack/react-router";
 import { motion, useReducedMotion } from "framer-motion";
 import {
   ArrowRight,
@@ -12,6 +12,7 @@ import {
   Phone,
   MapPin,
   ShieldCheck,
+  BadgeCheck,
 } from "lucide-react";
 import { Logo } from "@/components/brand/Logo";
 import { services, industries } from "@/lib/site-data";
@@ -104,6 +105,19 @@ export function Footer() {
                   PMP certified · RERA registered · 250+ projects delivered
                 </p>
               </div>
+
+              <div className="mt-3 rounded-2xl border border-gold/25 bg-gold/[0.04] px-5 py-4">
+                <div className="flex items-center gap-2 text-[0.65rem] font-semibold uppercase tracking-[0.16em] text-gold/80">
+                  <BadgeCheck className="size-4" aria-hidden="true" />
+                  Group licensing
+                </div>
+                <p className="mt-2 font-display text-sm font-semibold text-white">
+                  YAM Universal - F.Z.E
+                </p>
+                <p className="mt-0.5 text-xs text-white/50">
+                  License No. 55811 · Ajman Free Zone, UAE
+                </p>
+              </div>
             </motion.div>
 
             <motion.nav
@@ -162,25 +176,47 @@ export function Footer() {
               <h4 className="font-display text-xs font-semibold uppercase tracking-[0.22em] text-gold">
                 Contact
               </h4>
-              <address className="mt-4 space-y-3 text-sm not-italic tracking-wide text-white/75">
-                <a
-                  href="mailto:info@yampmc.com"
-                  className="group flex w-fit items-center gap-2.5 rounded-sm transition-colors hover:text-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold/60 focus-visible:ring-offset-2 focus-visible:ring-offset-navy-deep"
-                >
-                  <Mail className="size-3.5 text-gold/70 transition-colors group-hover:text-gold" aria-hidden="true" />
-                  info@yampmc.com
-                </a>
-                <a
-                  href="tel:+97142838250"
-                  className="group flex w-fit items-center gap-2.5 rounded-sm transition-colors hover:text-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold/60 focus-visible:ring-offset-2 focus-visible:ring-offset-navy-deep"
-                >
-                  <Phone className="size-3.5 text-gold/70 transition-colors group-hover:text-gold" aria-hidden="true" />
-                  (04) 283 8250
-                </a>
-                <span className="flex items-start gap-2.5">
-                  <MapPin className="mt-0.5 size-3.5 shrink-0 text-gold/70" aria-hidden="true" />
-                  Office 01, Fairlink Bldg., Behind Jetour Showroom, Al Khubaisi, Dubai, UAE
-                </span>
+              <a
+                href="mailto:info@yampmc.com"
+                className="group mt-4 flex w-fit items-center gap-2.5 rounded-sm text-sm tracking-wide text-white/75 transition-colors hover:text-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold/60 focus-visible:ring-offset-2 focus-visible:ring-offset-navy-deep"
+              >
+                <Mail className="size-3.5 text-gold/70 transition-colors group-hover:text-gold" aria-hidden="true" />
+                info@yampmc.com
+              </a>
+
+              <address className="mt-5 space-y-5 not-italic">
+                <div>
+                  <p className="text-[0.65rem] font-semibold uppercase tracking-[0.16em] text-gold/80">
+                    Dubai, UAE Office
+                  </p>
+                  <span className="mt-2 flex items-start gap-2.5 text-sm tracking-wide text-white/75">
+                    <MapPin className="mt-0.5 size-3.5 shrink-0 text-gold/70" aria-hidden="true" />
+                    Office 01, Fairlink Bldg., Behind Jetour Showroom, Al Khubaisi, Dubai, UAE
+                  </span>
+                  <a
+                    href="tel:+97142838250"
+                    className="group mt-2 flex w-fit items-center gap-2.5 rounded-sm text-sm tracking-wide text-white/75 transition-colors hover:text-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold/60 focus-visible:ring-offset-2 focus-visible:ring-offset-navy-deep"
+                  >
+                    <Phone className="size-3.5 text-gold/70 transition-colors group-hover:text-gold" aria-hidden="true" />
+                    (04) 283 8250
+                  </a>
+                </div>
+                <div>
+                  <p className="text-[0.65rem] font-semibold uppercase tracking-[0.16em] text-gold/80">
+                    Austin, TX, USA Office
+                  </p>
+                  <span className="mt-2 flex items-start gap-2.5 text-sm tracking-wide text-white/75">
+                    <MapPin className="mt-0.5 size-3.5 shrink-0 text-gold/70" aria-hidden="true" />
+                    5900 Balcones Drive, #STE 100, Austin, TX 78731, USA
+                  </span>
+                  <a
+                    href="tel:+15127608864"
+                    className="group mt-2 flex w-fit items-center gap-2.5 rounded-sm text-sm tracking-wide text-white/75 transition-colors hover:text-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold/60 focus-visible:ring-offset-2 focus-visible:ring-offset-navy-deep"
+                  >
+                    <Phone className="size-3.5 text-gold/70 transition-colors group-hover:text-gold" aria-hidden="true" />
+                    +1 512-760-8864
+                  </a>
+                </div>
               </address>
 
               <h4 className="mt-9 font-display text-xs font-semibold uppercase tracking-[0.22em] text-gold">
