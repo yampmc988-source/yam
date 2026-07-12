@@ -104,13 +104,6 @@ const license = {
     { label: "License No.", value: "55811", wide: false },
     { label: "Registration No.", value: "55811", wide: false },
     { label: "Legal form", value: "Free Zone Establishment - Limited Liability", wide: true },
-    {
-      label: "Jurisdiction",
-      value: "Free Zones Authority of Ajman, Ajman Free Zone, UAE",
-      wide: true,
-    },
-    { label: "Issued", value: "July 10, 2026", wide: false },
-    { label: "Valid until", value: "July 9, 2027", wide: false },
   ],
 };
 
