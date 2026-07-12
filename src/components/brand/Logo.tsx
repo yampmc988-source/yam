@@ -1,5 +1,5 @@
 ﻿import { Link } from "@tanstack/react-router";
-import logo from "@/assets/Yam-logo.png";
+import logo from "@/assets/yam-logo.png";
 import { cn } from "@/lib/utils";
 
 interface LogoProps {
