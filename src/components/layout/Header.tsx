@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
 import { Link, useRouterState } from "@tanstack/react-router";
 import { AnimatePresence, motion } from "framer-motion";
-import { ChevronDown, Menu, X, ArrowRight } from "lucide-react";
+import { ChevronDown, Menu, X, ArrowRight, ShieldCheck } from "lucide-react";
 import { Logo } from "@/components/brand/Logo";
 import { Button } from "@/components/ui/button";
-import { navServices } from "@/lib/site-data";
+import { navServices, universalActivities } from "@/lib/site-data";
 import { cn } from "@/lib/utils";
 
 const nav = [
@@ -85,7 +85,12 @@ export function Header() {
                   )}
                 >
                   {item.label}
-                  <ChevronDown className={cn("size-3.5 transition-transform duration-300", megaOpen && "rotate-180")} />
+                  <ChevronDown
+                    className={cn(
+                      "size-3.5 transition-transform duration-300",
+                      megaOpen && "rotate-180",
+                    )}
+                  />
                   <span
                     className={cn(
                       "absolute inset-x-3 -bottom-0.5 h-px scale-x-0 bg-gradient-gold transition-transform duration-300 group-hover/nav:scale-x-100",
@@ -100,7 +105,7 @@ export function Header() {
                       exit={{ opacity: 0, y: 8, rotateX: -6 }}
                       transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
                       style={{ transformPerspective: 1000, transformOrigin: "top center" }}
-                      className="absolute left-1/2 top-full w-[46rem] max-w-[calc(100vw-3rem)] -translate-x-1/2 pt-4"
+                      className="absolute left-1/2 top-full w-[52rem] max-w-[calc(100vw-3rem)] -translate-x-1/2 pt-4"
                     >
                       <div className="overflow-hidden rounded-2xl border border-border bg-card/95 p-3 shadow-elevated backdrop-blur-xl">
                         <div className="grid grid-cols-2 gap-1">
@@ -115,8 +120,12 @@ export function Header() {
                                 <s.icon className="size-5" />
                               </span>
                               <span>
-                                <span className="block text-sm font-semibold text-foreground">{s.title}</span>
-                                <span className="block text-xs text-muted-foreground">{s.tagline}</span>
+                                <span className="block text-sm font-semibold text-foreground">
+                                  {s.title}
+                                </span>
+                                <span className="block text-xs text-muted-foreground">
+                                  {s.tagline}
+                                </span>
                               </span>
                             </Link>
                           ))}
@@ -128,6 +137,45 @@ export function Header() {
                           Explore all services
                           <ArrowRight className="size-4 text-gold" />
                         </Link>
+
+                        {/* Separate group company */}
+                        <div className="mt-3 pt-3">
+                          <div className="h-px w-full bg-gradient-gold opacity-60" />
+                          <div className="mt-3 rounded-2xl bg-soft-blue/15 p-3 ring-1 ring-navy-soft/15">
+                            <div className="flex items-center gap-2 px-2 pb-2 pt-1">
+                              <span className="flex size-5 items-center justify-center rounded-full bg-gradient-gold text-navy-deep">
+                                <ShieldCheck className="size-3" />
+                              </span>
+                              <span className="text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-navy-soft">
+                                Other Yam Group Company
+                              </span>
+                            </div>
+                            <div className="grid grid-cols-2 gap-1">
+                              {universalActivities.map((a) => (
+                                <Link
+                                  key={a.slug}
+                                  to="/universal/$slug"
+                                  params={{ slug: a.slug }}
+                                  className="group flex items-center gap-2.5 rounded-xl p-2.5 transition-colors hover:bg-soft-blue/40"
+                                >
+                                  <span className="flex size-8 shrink-0 items-center justify-center rounded-lg bg-navy-soft text-white ring-1 ring-gold/40 transition-all duration-300 group-hover:bg-navy-deep group-hover:ring-gold/70">
+                                    <a.icon className="size-4" />
+                                  </span>
+                                  <span className="text-xs font-semibold text-foreground">
+                                    {a.title}
+                                  </span>
+                                </Link>
+                              ))}
+                            </div>
+                            <Link
+                              to="/universal"
+                              className="mt-1 flex items-center justify-between rounded-xl bg-navy-soft px-5 py-3 text-sm font-semibold text-white ring-1 ring-gold/30 transition-colors duration-300 hover:bg-navy-deep"
+                            >
+                              YAM Universal - F.Z.E · Explore all activities
+                              <ArrowRight className="size-4 text-gold" />
+                            </Link>
+                          </div>
+                        </div>
                       </div>
                     </motion.div>
                   )}
@@ -245,6 +293,43 @@ export function Header() {
                   </Link>
                 ))}
               </div>
+
+              <div className="mt-3 pt-5">
+                <div className="h-px w-full bg-gradient-gold opacity-60" />
+                <div className="mt-4 rounded-2xl bg-soft-blue/15 p-3 ring-1 ring-navy-soft/15">
+                  <div className="mb-3 flex items-center gap-2 px-1 pt-1">
+                    <span className="flex size-5 items-center justify-center rounded-full bg-gradient-gold text-navy-deep">
+                      <ShieldCheck className="size-3" />
+                    </span>
+                    <span className="text-xs font-semibold uppercase tracking-[0.16em] text-navy-soft">
+                      Other Yam Group Company
+                    </span>
+                  </div>
+                  <div className="grid grid-cols-2 gap-3">
+                    {universalActivities.map((a) => (
+                      <Link
+                        key={a.slug}
+                        to="/universal/$slug"
+                        params={{ slug: a.slug }}
+                        className="flex items-start gap-2.5 rounded-lg bg-navy-soft/10 px-3.5 py-3 text-sm font-medium leading-snug text-foreground ring-1 ring-navy-soft/20"
+                      >
+                        <span className="flex size-6 shrink-0 items-center justify-center rounded-md bg-navy-soft text-white ring-1 ring-gold/40">
+                          <a.icon className="size-3.5" />
+                        </span>
+                        {a.title}
+                      </Link>
+                    ))}
+                  </div>
+                  <Link
+                    to="/universal"
+                    className="mt-3 flex items-center justify-between rounded-lg bg-navy-soft px-3.5 py-3 text-sm font-semibold text-white ring-1 ring-gold/30"
+                  >
+                    YAM Universal - F.Z.E · View all
+                    <ArrowRight className="size-4 text-gold" />
+                  </Link>
+                </div>
+              </div>
+
               <Button asChild variant="gold" size="lg" className="mt-5">
                 <Link to="/contact">Get Consultation</Link>
               </Button>

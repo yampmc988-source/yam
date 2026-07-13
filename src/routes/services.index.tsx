@@ -7,6 +7,7 @@ import { Reveal, StaggerGroup, StaggerItem } from "@/components/ui/reveal";
 import { Counter } from "@/components/ui/counter";
 import { HomeProcess } from "@/components/sections/HomeProcess";
 import { CTABanner } from "@/components/sections/CTABanner";
+import { YamUniversalActivities } from "@/components/sections/YamUniversalActivities";
 import { services, stats } from "@/lib/site-data";
 import boardroom from "@/assets/hero-5-digital.jpg";
 
@@ -22,7 +23,8 @@ export const Route = createFileRoute("/services/")({
       { property: "og:title", content: "Services — Yam Group of Companies" },
       {
         property: "og:description",
-        content: "Seven integrated project management disciplines engineered for delivery certainty.",
+        content:
+          "Seven integrated project management disciplines engineered for delivery certainty.",
       },
       { property: "og:url", content: `https://yampmc.com/services` },
     ],
@@ -51,7 +53,9 @@ function ServicesPage() {
                 <div className="font-display text-3xl font-bold text-gradient-navy sm:text-4xl">
                   <Counter value={s.value} suffix={s.suffix} />
                 </div>
-                <p className="mt-1 text-xs leading-snug text-muted-foreground sm:text-sm">{s.label}</p>
+                <p className="mt-1 text-xs leading-snug text-muted-foreground sm:text-sm">
+                  {s.label}
+                </p>
               </div>
             ))}
           </div>
@@ -89,6 +93,8 @@ function ServicesPage() {
       <div className="bg-secondary/60">
         <HomeProcess />
       </div>
+
+      <YamUniversalActivities />
 
       <CTABanner />
     </>

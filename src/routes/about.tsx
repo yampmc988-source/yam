@@ -9,6 +9,7 @@ import { Button } from "@/components/ui/button";
 import { TiltCard } from "@/components/ui/tilt-card";
 import { Magnetic } from "@/components/ui/magnetic";
 import { CTABanner } from "@/components/sections/CTABanner";
+import { YamUniversalActivities } from "@/components/sections/YamUniversalActivities";
 import { coreValues, stats, whyYam } from "@/lib/site-data";
 import aboutImg from "@/assets/about-collaboration.jpg";
 import boardroom from "@/assets/hero-3-boardroom.jpg";
@@ -243,6 +244,8 @@ function AboutPage() {
           </Reveal>
         </div>
       </section>
+
+      <YamUniversalActivities />
 
       <CTABanner />
     </>

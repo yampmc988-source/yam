@@ -15,7 +15,9 @@ import { Route as FaqsRouteImport } from './routes/faqs'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as UniversalIndexRouteImport } from './routes/universal.index'
 import { Route as ServicesIndexRouteImport } from './routes/services.index'
+import { Route as UniversalSlugRouteImport } from './routes/universal.$slug'
 import { Route as ServicesSlugRouteImport } from './routes/services.$slug'
 
 const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
@@ -48,9 +50,19 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const UniversalIndexRoute = UniversalIndexRouteImport.update({
+  id: '/universal/',
+  path: '/universal/',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ServicesIndexRoute = ServicesIndexRouteImport.update({
   id: '/services/',
   path: '/services/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const UniversalSlugRoute = UniversalSlugRouteImport.update({
+  id: '/universal/$slug',
+  path: '/universal/$slug',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ServicesSlugRoute = ServicesSlugRouteImport.update({
@@ -67,7 +79,9 @@ export interface FileRoutesByFullPath {
   '/industries': typeof IndustriesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/services/$slug': typeof ServicesSlugRoute
+  '/universal/$slug': typeof UniversalSlugRoute
   '/services/': typeof ServicesIndexRoute
+  '/universal/': typeof UniversalIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -77,7 +91,9 @@ export interface FileRoutesByTo {
   '/industries': typeof IndustriesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/services/$slug': typeof ServicesSlugRoute
+  '/universal/$slug': typeof UniversalSlugRoute
   '/services': typeof ServicesIndexRoute
+  '/universal': typeof UniversalIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -88,7 +104,9 @@ export interface FileRoutesById {
   '/industries': typeof IndustriesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/services/$slug': typeof ServicesSlugRoute
+  '/universal/$slug': typeof UniversalSlugRoute
   '/services/': typeof ServicesIndexRoute
+  '/universal/': typeof UniversalIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -100,7 +118,9 @@ export interface FileRouteTypes {
     | '/industries'
     | '/sitemap.xml'
     | '/services/$slug'
+    | '/universal/$slug'
     | '/services/'
+    | '/universal/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -110,7 +130,9 @@ export interface FileRouteTypes {
     | '/industries'
     | '/sitemap.xml'
     | '/services/$slug'
+    | '/universal/$slug'
     | '/services'
+    | '/universal'
   id:
     | '__root__'
     | '/'
@@ -120,7 +142,9 @@ export interface FileRouteTypes {
     | '/industries'
     | '/sitemap.xml'
     | '/services/$slug'
+    | '/universal/$slug'
     | '/services/'
+    | '/universal/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -131,7 +155,9 @@ export interface RootRouteChildren {
   IndustriesRoute: typeof IndustriesRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   ServicesSlugRoute: typeof ServicesSlugRoute
+  UniversalSlugRoute: typeof UniversalSlugRoute
   ServicesIndexRoute: typeof ServicesIndexRoute
+  UniversalIndexRoute: typeof UniversalIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -178,11 +204,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/universal/': {
+      id: '/universal/'
+      path: '/universal'
+      fullPath: '/universal/'
+      preLoaderRoute: typeof UniversalIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/services/': {
       id: '/services/'
       path: '/services'
       fullPath: '/services/'
       preLoaderRoute: typeof ServicesIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/universal/$slug': {
+      id: '/universal/$slug'
+      path: '/universal/$slug'
+      fullPath: '/universal/$slug'
+      preLoaderRoute: typeof UniversalSlugRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/services/$slug': {
@@ -203,7 +243,9 @@ const rootRouteChildren: RootRouteChildren = {
   IndustriesRoute: IndustriesRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   ServicesSlugRoute: ServicesSlugRoute,
+  UniversalSlugRoute: UniversalSlugRoute,
   ServicesIndexRoute: ServicesIndexRoute,
+  UniversalIndexRoute: UniversalIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
